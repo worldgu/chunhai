@@ -57,13 +57,13 @@ npm run preview
 
 ## 联系邮箱
 
-默认是占位地址 `hello@example.com`，不是真实邮箱。上线前在构建环境设置：
+公开联系邮箱是 `zhanchunhai@gmail.com`（写在 `src/data/site.ts` 默认值与 [`.env.example`](.env.example)）。可用环境变量覆盖：
 
 ```sh
-PUBLIC_CONTACT_EMAIL=you@your-domain.com
+PUBLIC_CONTACT_EMAIL=zhanchunhai@gmail.com
 ```
 
-见 [`.env.example`](.env.example)。本地可以复制成 `.env`（已被 gitignore）。GitHub Actions 里要生效的话，把同名变量加到仓库的 Actions secrets 或 variables，并在 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 的构建步骤上传进去。不要提交密钥、私有邮箱密码或 Notion 私密链接。这个站点不调用需要 API key 的服务。
+本地可以复制 `.env.example` 为 `.env`（已被 gitignore）。GitHub Actions 里若要用变量覆盖，把同名变量加到仓库的 Actions secrets 或 variables，并在 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 的构建步骤传入。不要提交密钥、邮箱密码或 Notion 私密链接。这个站点不调用需要 API key 的服务。
 
 ## 发布到 GitHub Pages
 
