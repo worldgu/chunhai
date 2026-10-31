@@ -1,13 +1,12 @@
 ---
-import { nav, owner } from '../data/site';
+import { nav, siteName } from '../data/site';
 import { withBase } from '../lib/paths';
 ---
 
 <header class="site-header">
 	<div class="wrap header-inner">
 		<a class="brand" href={withBase('/#top')}>
-			<span class="brand-zh">{owner.nameZh}</span>
-			<span class="brand-en" lang="en">{owner.nameEn}</span>
+			<span class="brand-name" lang="en">{siteName}</span>
 		</a>
 		<nav class="site-nav" aria-label="页内">
 			<ul>
