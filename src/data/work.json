@@ -1,12 +1,41 @@
 [
   {
+    "id": "grok-bot-guide",
+    "title": "Grok Bot 新手上手指南",
+    "category": "AI",
+    "status": "已上线",
+    "summary": "从第一句对话到连接账号与云电脑",
+    "role": "写作",
+    "tags": [
+      "Grok Bot",
+      "上手",
+      "教程"
+    ],
+    "featured": true,
+    "order": 0,
+    "cover": "/covers/grok-bot-guide.svg",
+    "coverAlt": "Grok Bot 上手指南封面：对话与云电脑示意",
+    "note": "站内中文新手教程，讲清连接器、日常用法与例行任务。",
+    "links": [
+      {
+        "label": "阅读教程",
+        "href": "https://worldgu.github.io/chunhai/ai/grok-bot-guide/",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "id": "zero-r",
     "title": "ZERO-R",
     "category": "产品 / 工具",
     "status": "已上线",
     "summary": "前端在线演示",
     "role": "独立设计与实现",
-    "tags": ["前端", "在线演示", "TypeScript"],
+    "tags": [
+      "前端",
+      "在线演示",
+      "TypeScript"
+    ],
     "featured": true,
     "order": 1,
     "cover": "/covers/zero-r.svg",
@@ -31,7 +60,11 @@
     "status": "开发中",
     "summary": "AI agent 知识库实验",
     "role": "知识库模板与工作流",
-    "tags": ["Agent", "知识库", "工具链"],
+    "tags": [
+      "Agent",
+      "知识库",
+      "工具链"
+    ],
     "featured": true,
     "order": 2,
     "cover": "/covers/duck.svg",
@@ -52,7 +85,11 @@
     "status": "开发中",
     "summary": "Three.js 小品",
     "role": "独立实验",
-    "tags": ["Three.js", "可玩", "3D"],
+    "tags": [
+      "Three.js",
+      "可玩",
+      "3D"
+    ],
     "featured": false,
     "order": 3,
     "cover": "/covers/game.svg",
@@ -73,7 +110,9 @@
     "status": "思考中",
     "summary": "待填入标题与公开阅读链",
     "role": "写作",
-    "tags": ["写作"],
+    "tags": [
+      "写作"
+    ],
     "featured": true,
     "order": 4,
     "cover": "/covers/writing.svg",
@@ -88,7 +127,9 @@
     "status": "思考中",
     "summary": "待填入系列名与封面",
     "role": "拍摄",
-    "tags": ["摄影"],
+    "tags": [
+      "摄影"
+    ],
     "featured": false,
     "order": 5,
     "cover": "/covers/photo.svg",
