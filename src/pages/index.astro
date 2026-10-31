@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import NowLine from '../components/NowLine.astro';
+import WorkSection from '../components/WorkSection.astro';
+import Skills from '../components/Skills.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+
+const works = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base>
+	<Hero />
+	<NowLine />
+	<WorkSection works={works} />
+	<Skills />
+	<About />
+	<Contact />
+</Base>
