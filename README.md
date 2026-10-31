@@ -15,16 +15,16 @@ npm install
 npm run dev
 ```
 
-配置了 GitHub 项目站的 `base`（`/worldgu-site`），本地打开：
+配置了 GitHub 项目站的 `base`（`/chunhai`），本地打开：
 
-`http://localhost:4321/worldgu-site/`
+`http://localhost:4321/chunhai/`
 
 ```sh
 npm run build
 npm run preview
 ```
 
-`npm run build` 把静态文件写到 `dist/`。页面没有客户端框架，构建结果是 HTML 和 CSS。`npm run preview` 同样带 `/worldgu-site/` 前缀。
+`npm run build` 把静态文件写到 `dist/`。页面没有客户端框架，构建结果是 HTML 和 CSS。`npm run preview` 同样带 `/chunhai/` 前缀。
 
 ## 改作品
 
@@ -72,14 +72,14 @@ PUBLIC_CONTACT_EMAIL=zhanchunhai@gmail.com
 | 项 | 值 |
 | --- | --- |
 | GitHub 账号 | [worldgu](https://github.com/worldgu) |
-| 目标仓库 | `worldgu/worldgu-site`（公开）。名字被占用时再用 `worldgu/site`，并同步改 `astro.config.mjs` 的 `base` |
+| 目标仓库 | `worldgu/chunhai`（公开） |
 | `site` | `https://worldgu.github.io` |
-| `base` | `/worldgu-site` |
-| 配置中的 Pages 地址 | `https://worldgu.github.io/worldgu-site/` |
+| `base` | `/chunhai` |
+| 配置中的 Pages 地址 | `https://worldgu.github.io/chunhai/` |
 | 构建 | `npm run build` → `dist/` |
 | 工作流 | [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)，`push` 到 `main` 或手动 `workflow_dispatch` |
 
-`https://worldgu.github.io/worldgu-site/` 是仓库创建且 Actions 部署成功之后的地址。在那之前它不是已验证的线上站点。
+`https://worldgu.github.io/chunhai/` 是仓库改名且 Actions 部署成功之后的地址。旧地址 `https://worldgu.github.io/worldgu-site/` 会在改名后失效。
 
 工作流使用官方 [`withastro/action@v6`](https://github.com/withastro/action) 安装依赖、构建并上传 `dist/`，再用 `actions/deploy-pages` 发布。Node 固定为 `22.23.4`。
 
@@ -89,4 +89,4 @@ PUBLIC_CONTACT_EMAIL=zhanchunhai@gmail.com
 
 ### Origin 和 GitHub
 
-Origin 仍然保存这份云端草稿，推送到 Origin 的 `main` 不会发布 Pages。GitHub `worldgu/worldgu-site` 才是部署远端：它的 `main` 触发 Actions。在你决定把 GitHub 当成唯一源头之前，两边可以各留一份；改公开站点时，以推到 GitHub `main` 为准。
+Origin 仍然保存这份云端草稿，推送到 Origin 的 `main` 不会发布 Pages。GitHub `worldgu/chunhai` 才是部署远端：它的 `main` 触发 Actions。在你决定把 GitHub 当成唯一源头之前，两边可以各留一份；改公开站点时，以推到 GitHub `main` 为准。
