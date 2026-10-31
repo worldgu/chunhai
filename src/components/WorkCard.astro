@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/paths';
+
+interface Props {
+	work: CollectionEntry<'work'>;
+}
+
+const { work } = Astro.props;
+const { title, category, status, summary, role, tags, cover, coverAlt, note, links } = work.data;
+---
+
+<article class="card" id={`work-${work.id}`} data-work-card data-category={category}>
+	<img class="cover" src={withBase(cover)} alt={coverAlt} width="1600" height="1000" />
+	<div class="card-body">
+		<p class="card-meta">
+			<span class="status" data-status={status}>{status}</span>
+			<span class="card-category">{category}</span>
+		</p>
+		<h4 class="card-title">{title}</h4>
+		<p class="card-summary">{summary}</p>
+		<p class="card-role">角色 · {role}</p>
+		{
+			tags.length > 0 && (
+				<ul class="tags">
+					{tags.map((tag) => (
+						<li>{tag}</li>
+					))}
+				</ul>
+			)
+		}
+		{
+			links.length > 0 ? (
+				<ul class="card-links">
+					{links.map((link) => (
+						<li>
+							<a href={link.href} data-kind={link.kind} target="_blank" rel="noopener noreferrer">
+								{link.label}
+								<span class="sr-only">（新窗口打开）</span>
+							</a>
+						</li>
+					))}
+				</ul>
+			) : (
+				<p class="pending-link">公开链接待补充</p>
+			)
+		}
+		{note && <p class="card-note">{note}</p>}
+	</div>
+</article>

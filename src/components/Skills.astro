@@ -1,0 +1,33 @@
+---
+import { skillGroups } from '../data/site';
+---
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+	<div class="wrap skills-layout">
+		<div>
+			<p class="section-kicker" lang="en">Skills</p>
+			<h2 id="skills-title">技能</h2>
+			<p class="section-lead">三组可以展开。这里记的是能交付的手艺，不是模型厂商名单。</p>
+		</div>
+		<div class="skill-list">
+			{
+				skillGroups.map((group) => (
+					<details class="skill-group" id={`skill-${group.id}`}>
+						<summary>
+							<span class="skill-label">
+								{group.label}
+								<small lang="en">{group.en}</small>
+							</span>
+							<span class="chevron" aria-hidden="true" />
+						</summary>
+						<ul class="tags">
+							{group.tags.map((tag) => (
+								<li>{tag}</li>
+							))}
+						</ul>
+					</details>
+				))
+			}
+		</div>
+	</div>
+</section>

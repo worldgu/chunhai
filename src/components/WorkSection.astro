@@ -1,0 +1,88 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import WorkCard from './WorkCard.astro';
+import { categories } from '../data/site';
+
+interface Props {
+	works: CollectionEntry<'work'>[];
+}
+
+const { works } = Astro.props;
+const featured = works.filter((work) => work.data.featured).slice(0, 3);
+const grouped = categories.map((category) => ({
+	category,
+	items: works.filter((work) => work.data.category === category.label),
+}));
+---
+
+<section class="section" id="work" aria-labelledby="work-title">
+	<div class="wrap">
+		<p class="section-kicker" lang="en">Work</p>
+		<h2 id="work-title">作品</h2>
+		<p class="section-lead">精选三件放在前面。下面八个方向始终展开，空着的写「即将补充」。</p>
+
+		<div class="featured" aria-labelledby="featured-title">
+			<h3 id="featured-title">精选</h3>
+			<ol class="featured-strip">
+				{
+					featured.map((work) => {
+						const primary = work.data.links[0];
+						return (
+							<li class="featured-item" data-featured={work.id}>
+								<a class="featured-jump" href={`#work-${work.id}`}>
+									<span class="featured-title">{work.data.title}</span>
+									<span class="featured-meta">
+										{work.data.status} · {work.data.summary}
+									</span>
+								</a>
+								{primary ? (
+									<a
+										class="featured-out"
+										href={primary.href}
+										data-kind={primary.kind}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{primary.label}
+										<span class="sr-only">（新窗口打开）</span>
+									</a>
+								) : (
+									<a class="featured-out" href={`#work-${work.id}`}>
+										查看占位
+									</a>
+								)}
+							</li>
+						);
+					})
+				}
+			</ol>
+		</div>
+
+		<div class="catalog">
+			<p class="catalog-title">全部方向</p>
+			<div class="category-list">
+				{
+					grouped.map(({ category, items }) => (
+						<section class="category" id={`cat-${category.id}`} data-category-entry={category.label}>
+							<div class="category-heading">
+								<h3>{category.label}</h3>
+								<p lang="en">{category.en}</p>
+							</div>
+							<div class="category-body">
+								{items.length > 0 ? (
+									<div class="card-grid">
+										{items.map((work) => (
+											<WorkCard work={work} />
+										))}
+									</div>
+								) : (
+									<p class="placeholder">即将补充</p>
+								)}
+							</div>
+						</section>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

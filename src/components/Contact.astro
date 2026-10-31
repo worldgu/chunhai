@@ -1,0 +1,37 @@
+---
+import { contactEmail, owner } from '../data/site';
+---
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+	<div class="wrap">
+		<p class="section-kicker" lang="en">Contact</p>
+		<h2 id="contact-title">联系</h2>
+		<p class="section-lead">邮件地址在换成公开邮箱之前，是占位符。</p>
+		<dl class="contact-list">
+			<div>
+				<dt>GitHub</dt>
+				<dd>
+					<a href={owner.githubUrl} target="_blank" rel="noopener noreferrer">
+						{owner.githubUser}
+						<span class="sr-only">（新窗口打开）</span>
+					</a>
+				</dd>
+			</div>
+			<div>
+				<dt>邮件</dt>
+				<dd>
+					<a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+				</dd>
+			</div>
+			<div>
+				<dt>X</dt>
+				<dd>
+					<a href={owner.xUrl} target="_blank" rel="noopener noreferrer">
+						{owner.xHandle}
+						<span class="sr-only">（新窗口打开）</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+	</div>
+</section>

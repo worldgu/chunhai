@@ -1,0 +1,24 @@
+---
+import { owner, taglineEn, taglineZh } from '../data/site';
+import { withBase } from '../lib/paths';
+---
+
+<section class="hero" id="top">
+	<div class="wrap hero-inner">
+		<div class="identity">
+			<img class="avatar" src={withBase('/avatar.svg')} width="72" height="72" alt="" />
+			<div>
+				<p class="kicker">个人站点</p>
+				<h1>
+					{owner.nameZh}<span class="name-en" lang="en">&nbsp;/&nbsp;{owner.nameEn}</span>
+				</h1>
+			</div>
+		</div>
+		<p class="tagline">{taglineZh}</p>
+		<p class="tagline-en" lang="en">{taglineEn}</p>
+		<div class="cta-row">
+			<a class="btn btn-primary" href={withBase('/#work')}>查看作品</a>
+			<a class="btn btn-secondary" href={withBase('/#contact')}>联系</a>
+		</div>
+	</div>
+</section>

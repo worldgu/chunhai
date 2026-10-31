@@ -1,0 +1,24 @@
+---
+import { nav, owner } from '../data/site';
+import { withBase } from '../lib/paths';
+---
+
+<header class="site-header">
+	<div class="wrap header-inner">
+		<a class="brand" href={withBase('/#top')}>
+			<span class="brand-zh">{owner.nameZh}</span>
+			<span class="brand-en" lang="en">{owner.nameEn}</span>
+		</a>
+		<nav class="site-nav" aria-label="页内">
+			<ul>
+				{
+					nav.map((item) => (
+						<li>
+							<a href={withBase(item.href)}>{item.label}</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>

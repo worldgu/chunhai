@@ -1,0 +1,11 @@
+---
+import { owner } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<div class="wrap footer-inner">
+		<p>© {year} {owner.nameZh} / {owner.nameEn} · <a href={owner.githubUrl}>GitHub</a></p>
+	</div>
+</footer>
