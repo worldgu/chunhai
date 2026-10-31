@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f2f2f7"/>
+  <text x="120" y="160" font-family="ui-sans-serif, system-ui, sans-serif" font-size="32" fill="#6e6e73">Grok Bot · 上手</text>
+  <rect x="120" y="280" width="520" height="400" rx="24" fill="#ffffff" stroke="#1d1d1f" stroke-width="3"/>
+  <rect x="180" y="340" width="400" height="36" rx="8" fill="#ececf1"/>
+  <rect x="180" y="400" width="320" height="36" rx="8" fill="#ececf1"/>
+  <rect x="180" y="460" width="360" height="36" rx="8" fill="#ececf1"/>
+  <rect x="180" y="560" width="160" height="48" rx="12" fill="#1d1d1f"/>
+  <text x="260" y="592" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#f5f5f7">对话</text>
+  <rect x="760" y="280" width="720" height="400" rx="24" fill="#1d1d1f"/>
+  <rect x="820" y="360" width="200" height="140" rx="16" fill="#3a3a3c"/>
+  <rect x="1060" y="360" width="200" height="140" rx="16" fill="#3a3a3c"/>
+  <rect x="1300" y="360" width="120" height="140" rx="16" fill="#3a3a3c"/>
+  <text x="1120" y="580" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#f5f5f7">云电脑 · 连接器 · 例行任务</text>
+  <text x="120" y="820" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#6e6e73">从第一句对话开始，让助手真正帮你做事</text>
+</svg>
