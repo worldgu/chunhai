@@ -6,8 +6,8 @@
 const envEmail = import.meta.env.PUBLIC_CONTACT_EMAIL;
 const trimmedEmail = typeof envEmail === 'string' ? envEmail.trim() : '';
 
-/** 未设置 PUBLIC_CONTACT_EMAIL 时使用的公开占位，不是真实邮箱。 */
-export const contactEmail = trimmedEmail || 'hello@example.com';
+/** 公开联系邮箱；可用 PUBLIC_CONTACT_EMAIL 覆盖。 */
+export const contactEmail = trimmedEmail || 'zhanchunhai@gmail.com';
 
 export const owner = {
 	nameZh: '张春海',
