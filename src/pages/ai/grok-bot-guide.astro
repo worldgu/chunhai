@@ -1,0 +1,336 @@
+---
+import Base from '../../layouts/Base.astro';
+import { withBase } from '../../lib/paths';
+
+const title = 'Grok Bot 新手上手指南 · chunhai';
+const description =
+	'面向完全新手的 Grok Bot 实用上手：它是什么、怎么开始第一句对话、如何连接 Gmail / Notion / GitHub、日常怎么交代真实工作，以及云电脑与例行任务怎么用。';
+---
+
+<Base title={title} description={description}>
+	<article class="article-page">
+		<div class="wrap article-wrap">
+			<p class="article-kicker">
+				<a href={withBase('/#cat-ai')}>AI</a>
+				<span aria-hidden="true"> · </span>
+				教程
+			</p>
+			<header class="article-header">
+				<h1>Grok Bot 新手上手指南</h1>
+				<p class="article-lead">
+					这不是产品宣传稿。目标只有一个：让你从「听说有个助手」走到「真的让它帮你把事做完」。
+				</p>
+				<p class="article-meta">
+					<span>chunhai</span>
+					<span aria-hidden="true"> · </span>
+					<span>约 12 分钟阅读</span>
+				</p>
+			</header>
+
+			<nav class="article-toc" aria-label="目录">
+				<p class="toc-title">本篇目录</p>
+				<ol>
+					<li><a href="#what">它是什么</a></li>
+					<li><a href="#start">怎么开始 / 第一句对话</a></li>
+					<li><a href="#connect">连接账号</a></li>
+					<li><a href="#daily">日常：让它做真实工作</a></li>
+					<li><a href="#box">云电脑（box）基础</a></li>
+					<li><a href="#tips">更好的提问与例行任务</a></li>
+					<li><a href="#safety">安全与边界（必读）</a></li>
+				</ol>
+			</nav>
+
+			<section class="article-section" id="what" aria-labelledby="what-title">
+				<h2 id="what-title">1. Grok Bot 是什么</h2>
+				<p>
+					Grok Bot 是一个<strong>可以动手做事的桌面助手</strong>。你跟它聊天，它不只会回答问题，还能在授权范围内：
+				</p>
+				<ul>
+					<li>读写你已连接的应用（例如 Notion、Gmail、日历、GitHub）</li>
+					<li>在它自己的<strong>云电脑</strong>上装工具、跑命令、开浏览器、生成文件</li>
+					<li>帮你写代码、改站点、查资料、整理文档</li>
+					<li>按你设定的<strong>例行任务（routines）</strong>定期提醒或执行</li>
+				</ul>
+				<p>
+					可以把它想成：一个有自己电脑、又能借你账号办事的同事。你负责说清目标与边界；它负责拆步骤、操作、回报结果。
+				</p>
+				<p>
+					<strong>和「只会聊天的 AI」最大的差别</strong>：它有持久的工作环境（云电脑文件会留着），也能走连接器去改你的真实数据——但发邮件、花钱、对外发帖这类不可逆动作，通常要你先点同意。
+				</p>
+			</section>
+
+			<section class="article-section" id="start" aria-labelledby="start-title">
+				<h2 id="start-title">2. 怎么开始 / 第一句对话</h2>
+				<ol>
+					<li>打开 Grok Bot 应用或网页端，进入与助手的对话。</li>
+					<li>第一句<strong>直接说你想完成的事</strong>，不必先寒暄。例如：
+						<ul>
+							<li>「帮我看一下本周日历，明天有没有空档。」</li>
+							<li>「在 Notion 里建一页：本周复盘模板。」</li>
+							<li>「查一下某某工具的最新定价，做成三行结论。」</li>
+						</ul>
+					</li>
+					<li>如果它需要权限（连接器未装、要发邮件、要登录某站），它会停下来请你确认或连接，而不是默默越权。</li>
+					<li>事情做完后，让它用一句话汇报：改了什么、链接在哪、你还需要点什么。</li>
+				</ol>
+				<p class="callout">
+					<strong>新手技巧：</strong>第一句就把「结果长什么样」说清楚。  
+					「写点东西」太空；「写一页 Notion，标题叫周复盘，含本周完成 / 未完成 / 下周三件事」就好办。
+				</p>
+			</section>
+
+			<section class="article-section" id="connect" aria-labelledby="connect-title">
+				<h2 id="connect-title">3. 连接账号（Connectors）</h2>
+				<p>
+					连接器让助手用<strong>你已经授权的账号</strong>办事，而不是让你反复复制粘贴。常见包括：Gmail、Notion、GitHub、Google 日历，以及其它你装上的服务（例如 Linear、Vercel、部分聊天工具）。
+				</p>
+				<h3>建议连接顺序</h3>
+				<ol>
+					<li><strong>日历</strong>：查空档、建日程最常用。</li>
+					<li><strong>Notion</strong>（或你主要写笔记的地方）：适合「建页、改页、查页」。</li>
+					<li><strong>Gmail / 邮箱</strong>：适合起草与搜索邮件；真正发出去前一般要你确认。</li>
+					<li><strong>GitHub</strong>：适合仓库、Issues、站点代码；推送敏感权限时要留意。</li>
+				</ol>
+				<h3>怎么连</h3>
+				<ul>
+					<li>在对话里直接说「帮我连接 Gmail / Notion」——它通常会弹出连接卡片或指引。</li>
+					<li>也可以在设置里的连接器 / Connectors 列表里安装并登录。</li>
+					<li>一个服务若有多个账号，选对那一个再授权。</li>
+				</ul>
+				<p class="callout">
+					<strong>原则：</strong>只连你真的会让助手碰的账号。连上之后，把它当成「有权限的同事」，用自然语言规定范围，例如：「只读日历，不要改」「可以建 Notion 页，但不要删库」。
+				</p>
+			</section>
+
+			<section class="article-section" id="daily" aria-labelledby="daily-title">
+				<h2 id="daily-title">4. 日常：让它做真实工作</h2>
+				<p>下面这些是上手后最值得练的几类请求（按场景抄改即可）。</p>
+
+				<h3>Notion / 文档</h3>
+				<ul>
+					<li>「在某某数据库新建一条任务，截止日期周五，状态待办。」</li>
+					<li>「把今天的会议纪要整理成一页 Notion，标题用日期。」</li>
+					<li>「搜索工作区里关于日本行程的页面，列链接给我。」</li>
+				</ul>
+
+				<h3>邮件</h3>
+				<ul>
+					<li>「搜最近一封来自某某的邮件，总结要点。」</li>
+					<li>「起草一封回复：礼貌拒绝改期，并提出两个可选时间。」——先看草稿，确认后再让它发送。</li>
+				</ul>
+
+				<h3>日历</h3>
+				<ul>
+					<li>「本周三下午我有空吗？有的话建一个 30 分钟的『写周报』。」</li>
+					<li>「列出明天所有日程，按时间排。」</li>
+				</ul>
+
+				<h3>研究与整理</h3>
+				<ul>
+					<li>「对比 A 和 B 两个工具的免费额度，做成表格，并给推荐。」</li>
+					<li>「根据这个链接写 5 条要点，标出来源。」</li>
+				</ul>
+
+				<h3>代码与个人站点</h3>
+				<ul>
+					<li>「在仓库里改首页文案，提交说明写清楚。」</li>
+					<li>「给 GitHub Pages 站点加一张作品卡片，并挂上文章链接。」</li>
+				</ul>
+				<p>
+					复杂改码时，它可能拆成云端代理 / 子任务在云电脑上长时间跑构建与预览；你只需盯结果与是否需要登录、授权。
+				</p>
+			</section>
+
+			<section class="article-section" id="box" aria-labelledby="box-title">
+				<h2 id="box-title">5. 云电脑（box）基础</h2>
+				<p>
+					Grok Bot 有一台<strong>属于助手侧的云电脑</strong>（常被叫作 box）：Linux 环境，能装软件、跑终端、生成表格/文档/图片，还有自己的桌面浏览器。
+				</p>
+				<ul>
+					<li><strong>文件会留下</strong>：这次生成的草稿、克隆的仓库，下次对话往往还能接着用。</li>
+					<li><strong>和你本机是分开的</strong>：默认改的是云电脑上的文件；要动你电脑里的文件，需要你注册本机并明确授权。</li>
+					<li><strong>浏览器桌面</strong>：没有连接器的网站、需要登录的后台，它可以在云桌面里打开；敏感登录会走安全流程，不会随便要你把密码打在聊天里。</li>
+					<li><strong>能做的事举例</strong>：克隆 GitHub 仓库、本地构建静态站、用脚本处理 CSV、截图核对页面、打包发给你。</li>
+				</ul>
+				<p class="callout">
+					你可以这样说：「在你的云电脑上克隆这个仓库，改完给我看预览链接 / 改动摘要。」——比「你想象一下怎么改」靠谱得多。
+				</p>
+			</section>
+
+			<section class="article-section" id="tips" aria-labelledby="tips-title">
+				<h2 id="tips-title">6. 更好的提问与例行任务</h2>
+
+				<h3>把目标写具体</h3>
+				<ul>
+					<li>说明<strong>对象</strong>：哪个仓库、哪个 Notion 库、哪封邮件。</li>
+					<li>说明<strong>完成标准</strong>：「推到 main」「只要草稿不要发送」「用中文三句话总结」。</li>
+					<li>说明<strong>不要做什么</strong>：「不要改生产环境」「不要删除任何页面」。</li>
+				</ul>
+
+				<h3>一次一事，或给清单</h3>
+				<p>
+					大事可以拆成清单：「先搜索 → 再起草 → 我确认后再发。」助手会按步停在需要你拍板的地方。
+				</p>
+
+				<h3>例行任务（Routines）</h3>
+				<p>
+					重复的事不要每次手打。例如：
+				</p>
+				<ul>
+					<li>每周一早上整理本周日历空档</li>
+					<li>每天汇总未读重要邮件标题</li>
+					<li>某个仓库有更新时提醒你</li>
+				</ul>
+				<p>
+					在对话里说「把这件事做成例行任务，每周一上午 9 点（上海时区）跑」，并确认触发条件与通知方式。例行任务会消耗你的用量额度，设之前想清楚频率。
+				</p>
+
+				<h3>记住你的偏好</h3>
+				<p>
+					可以告诉它：「以后默认用中文回复」「提交信息用英文简短句」「联系邮箱是某某」。它会尽量记在记忆里，减少你重复交代。
+				</p>
+			</section>
+
+			<section class="article-section" id="safety" aria-labelledby="safety-title">
+				<h2 id="safety-title">7. 安全与边界（必读）</h2>
+				<ul>
+					<li><strong>发信、发帖、付款、删数据</strong>：默认应先给你看草稿或确认卡，你点了才执行。</li>
+					<li><strong>密码与验证码</strong>：走应用内的安全填写 / 保险库流程，不要把完整密码长期贴在聊天记录里。</li>
+					<li><strong>私密链接</strong>：个人站点、公开仓库里不要贴未公开的 Notion 或带密钥的 URL。</li>
+					<li><strong>用量</strong>：对话、例行任务、云电脑工作都会计入计划额度；复杂长任务更耗。不够用时它可能停住，需要等刷新或调整计划。</li>
+				</ul>
+			</section>
+
+			<section class="article-section" id="closing" aria-labelledby="closing-title">
+				<h2 id="closing-title">收个底</h2>
+				<p>上手路径可以压成四步：</p>
+				<ol>
+					<li>用一句具体的话开始第一件事；</li>
+					<li>连上日历 / Notion / 邮箱里你真正要用的账号；</li>
+					<li>让它在云电脑或连接器上把事做完，并要回可点开的结果；</li>
+					<li>把每周重复的事收成例行任务。</li>
+				</ol>
+				<p>
+					如果你读完只记住一句：<strong>把 Grok Bot 当会用电脑的同事，而不是搜索框</strong>——目标说清，边界说清，然后让它动手。
+				</p>
+				<p class="article-back">
+					<a href={withBase('/#cat-ai')}>← 返回站点 AI 栏目</a>
+				</p>
+			</section>
+		</div>
+	</article>
+</Base>
+
+<style>
+	.article-page {
+		padding: 48px 0 80px;
+	}
+
+	.article-wrap {
+		max-width: 720px;
+	}
+
+	.article-kicker {
+		margin: 0 0 12px;
+		color: var(--muted);
+		font-size: 0.92rem;
+	}
+
+	.article-kicker a {
+		color: var(--muted);
+		font-weight: 600;
+		text-underline-offset: 3px;
+	}
+
+	.article-header h1 {
+		margin: 0 0 16px;
+		font-size: clamp(1.8rem, 4vw, 2.4rem);
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+	}
+
+	.article-lead {
+		margin: 0 0 12px;
+		font-size: 1.1rem;
+		color: var(--muted);
+	}
+
+	.article-meta {
+		margin: 0 0 32px;
+		color: var(--muted);
+		font-size: 0.92rem;
+	}
+
+	.article-toc {
+		margin: 0 0 40px;
+		padding: 20px 22px;
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: 16px;
+		box-shadow: var(--shadow);
+	}
+
+	.toc-title {
+		margin: 0 0 10px;
+		font-weight: 600;
+	}
+
+	.article-toc ol {
+		margin: 0;
+		padding-left: 1.2rem;
+	}
+
+	.article-toc a {
+		color: var(--ink);
+		text-underline-offset: 3px;
+	}
+
+	.article-section {
+		margin: 0 0 40px;
+		scroll-margin-top: calc(var(--header) + 16px);
+	}
+
+	.article-section h2 {
+		margin: 0 0 14px;
+		font-size: 1.35rem;
+		letter-spacing: -0.01em;
+	}
+
+	.article-section h3 {
+		margin: 22px 0 10px;
+		font-size: 1.05rem;
+	}
+
+	.article-section p,
+	.article-section li {
+		color: var(--ink);
+	}
+
+	.article-section ul,
+	.article-section ol {
+		margin: 0 0 14px;
+		padding-left: 1.25rem;
+	}
+
+	.article-section li + li {
+		margin-top: 6px;
+	}
+
+	.callout {
+		margin: 18px 0 0;
+		padding: 14px 16px;
+		background: var(--surface);
+		border-left: 3px solid var(--ink);
+		border-radius: 0 12px 12px 0;
+		color: var(--ink);
+	}
+
+	.article-back {
+		margin-top: 28px;
+	}
+
+	.article-back a {
+		font-weight: 600;
+		text-underline-offset: 3px;
+	}
+</style>
