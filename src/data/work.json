@@ -1,0 +1,99 @@
+[
+  {
+    "id": "zero-r",
+    "title": "ZERO-R",
+    "category": "产品 / 工具",
+    "status": "已上线",
+    "summary": "前端在线演示",
+    "role": "独立设计与实现",
+    "tags": ["前端", "在线演示", "TypeScript"],
+    "featured": true,
+    "order": 1,
+    "cover": "/covers/zero-r.svg",
+    "coverAlt": "ZERO-R 的抽象产品界面封面",
+    "links": [
+      {
+        "label": "在线演示",
+        "href": "https://zero-r.vercel.app",
+        "kind": "live"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/worldgu/ZERO-R",
+        "kind": "github"
+      }
+    ]
+  },
+  {
+    "id": "duck",
+    "title": "Duck",
+    "category": "AI",
+    "status": "开发中",
+    "summary": "AI agent 知识库实验",
+    "role": "知识库模板与工作流",
+    "tags": ["Agent", "知识库", "工具链"],
+    "featured": true,
+    "order": 2,
+    "cover": "/covers/duck.svg",
+    "coverAlt": "Duck 的结构示意：捕获、知识库、下一步",
+    "note": "可打开的是仓库里的知识库结构：捕获进去，整理成下一步。不是一份模型名单。",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/worldgu/Duck",
+        "kind": "github"
+      }
+    ]
+  },
+  {
+    "id": "game",
+    "title": "Game",
+    "category": "可玩交互",
+    "status": "开发中",
+    "summary": "Three.js 小品",
+    "role": "独立实验",
+    "tags": ["Three.js", "可玩", "3D"],
+    "featured": false,
+    "order": 3,
+    "cover": "/covers/game.svg",
+    "coverAlt": "Game 的几何抽象封面",
+    "note": "以能打开、能玩为先。仓库里有页面；公开 Live 还没定。",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/worldgu/Game",
+        "kind": "github"
+      }
+    ]
+  },
+  {
+    "id": "writing-placeholder",
+    "title": "文章占位",
+    "category": "文章 / 写作",
+    "status": "思考中",
+    "summary": "待填入标题与公开阅读链",
+    "role": "写作",
+    "tags": ["写作"],
+    "featured": true,
+    "order": 4,
+    "cover": "/covers/writing.svg",
+    "coverAlt": "文章占位的文字封面",
+    "note": "标题和公开阅读链都还没定，这里不放链到不存在的文章。",
+    "links": []
+  },
+  {
+    "id": "photo-placeholder",
+    "title": "摄影占位",
+    "category": "摄影",
+    "status": "思考中",
+    "summary": "待填入系列名与封面",
+    "role": "拍摄",
+    "tags": ["摄影"],
+    "featured": false,
+    "order": 5,
+    "cover": "/covers/photo.svg",
+    "coverAlt": "摄影占位封面，抽象色块，不是实拍",
+    "note": "系列名未定。这张封面是占位图形，换成自己的照片后再补图库链接。",
+    "links": []
+  }
+]
