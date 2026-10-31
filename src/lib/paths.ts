@@ -1,6 +1,6 @@
 /**
  * Prefix a site-root path with Astro's `base`.
- * Project Pages serves the site at `/worldgu-site/`, not `/`.
+ * Project Pages serves the site at `/chunhai/`, not `/`.
  * Absolute URLs (https:, mailto:) are left unchanged.
  */
 export function withBase(path: string): string {
