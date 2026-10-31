@@ -1,9 +1,9 @@
 {
-  "name": "jack-portfolio",
+  "name": "chunhai",
   "private": true,
   "type": "module",
   "version": "0.0.1",
-  "description": "Static personal site for 张春海 / Jack.",
+  "description": "chunhai — personal site for 张春海 / Jack.",
   "engines": {
     "node": ">=22.23.4"
   },
