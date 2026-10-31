@@ -9,6 +9,9 @@ const trimmedEmail = typeof envEmail === 'string' ? envEmail.trim() : '';
 /** 公开联系邮箱；可用 PUBLIC_CONTACT_EMAIL 覆盖。 */
 export const contactEmail = trimmedEmail || 'zhanchunhai@gmail.com';
 
+/** 站点 / 项目对外名称（页眉、标题、包名展示用）。 */
+export const siteName = 'chunhai';
+
 export const owner = {
 	nameZh: '张春海',
 	nameEn: 'Jack',
