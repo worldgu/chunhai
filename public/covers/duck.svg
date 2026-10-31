@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f2f2f7"/>
+  <text x="120" y="160" font-family="ui-sans-serif, system-ui, sans-serif" font-size="32" fill="#6e6e73">Duck · 结构</text>
+  <rect x="120" y="340" width="360" height="220" rx="20" fill="#ffffff" stroke="#1d1d1f" stroke-width="3"/>
+  <rect x="620" y="340" width="360" height="220" rx="20" fill="#1d1d1f"/>
+  <rect x="1120" y="340" width="360" height="220" rx="20" fill="#ffffff" stroke="#1d1d1f" stroke-width="3"/>
+  <text x="300" y="468" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="42" fill="#1d1d1f">捕获</text>
+  <text x="800" y="468" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="42" fill="#f5f5f7">知识库</text>
+  <text x="1300" y="468" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="42" fill="#1d1d1f">下一步</text>
+  <path d="M490 450h110M990 450h110" stroke="#1d1d1f" stroke-width="3" fill="none"/>
+  <path d="M580 438l22 12-22 12M1080 438l22 12-22 12" fill="#1d1d1f"/>
+  <text x="120" y="820" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#6e6e73">Agent 把记录整理成可执行的一步</text>
+</svg>

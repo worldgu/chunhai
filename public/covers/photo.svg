@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#d5dde6"/>
+  <rect y="620" width="1600" height="380" fill="#e7e0d4"/>
+  <circle cx="1180" cy="250" r="90" fill="#f7f4ee"/>
+  <rect x="180" y="460" width="220" height="360" fill="#c5c0b6"/>
+  <rect x="460" y="540" width="160" height="280" fill="#b7c3b4"/>
+  <text x="120" y="150" font-family="ui-sans-serif, system-ui, sans-serif" font-size="32" fill="#3a3a3c">摄影占位 · 不是实拍</text>
+</svg>
